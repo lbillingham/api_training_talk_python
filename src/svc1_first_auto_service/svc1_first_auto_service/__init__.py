@@ -25,7 +25,7 @@ def register_routes(config):
 def allow_cors(config):
     def add_cors_headers_response_callback(event):
         def cors_headers(request, response):
-            if 'api' not in request.path:
+            if r'/api/' not in request.path:
                 return
             response.headers.update({
                 'Access-Control-Allow-Origin': '*',

@@ -33,3 +33,10 @@ class Repository(object):
                 key = str(uuid.uuid4())
                 row['id'] = key
                 cls.__car_data[key] = row
+
+    @classmethod
+    def add_car(cls, car_data):
+        key = str(uuid.uuid4())
+        car_data['id'] = key
+        cls.__car_data[key] = car_data
+        return car_data
