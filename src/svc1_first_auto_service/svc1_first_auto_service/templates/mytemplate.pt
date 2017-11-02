@@ -8,12 +8,29 @@
                 <strong>Endpoints</strong>
             <ul>
                 <li>
-                    <strong>All cars</strong><br>
+                    <strong>List all cars</strong><br>
                     <a href="/api/autos">GET /api/autos</a>
+                    Returns a JSON body listing car details
                 </li>
                 <li>
-                    <strong>Individual car</strong><br>
+                    <strong>Individual car details</strong><br>
                     <a href="/api/autos/123">GET /api/autos/{car_id}</a>
+                    Returns a car's name, price, year, brand ... as  JSON
+                </li>
+                <li>
+                    <strong>Add new car</strong><br>
+                    <a href="/api/autos">POST /api/autos}</a>
+                    Create a new car based on the details supplied as a JSON body.
+                </li>
+                <li>
+                    <strong>Update a car's details</strong><br>
+                    <a href="/api/autos/123">PUT /api/autos/{car_id}</a>
+                    If a car's details already contain a price, year, etc. update those details based on supplied as a JSON body.
+                </li>
+                <li>
+                    <strong>Delete a car</strong><br>
+                    <a href="/api/autos/123">DELETE /api/autos/{car_id}</a>
+                    Delete the record for a given car based on its supplied ID.
                 </li>
             </ul>
             </p>

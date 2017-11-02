@@ -40,3 +40,13 @@ class Repository(object):
         car_data['id'] = key
         cls.__car_data[key] = car_data
         return car_data
+
+    @classmethod
+    def update_car(cls, car_id, new_data):
+        for key_update, val_update in new_data.items():
+            if key_update in cls.__car_data[car_id].keys():
+                cls.__car_data[car_id][key_update] = val_update
+
+    @classmethod
+    def delete_car(cls, car_id):
+        del cls.__car_data[car_id]
